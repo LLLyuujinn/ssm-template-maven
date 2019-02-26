@@ -29,4 +29,13 @@ public class TestContro {
 		return array;
 	}
 
+	@RequestMapping("/test2")
+	@ResponseBody
+	public JSONArray test2() {
+		JSONArray array = new JSONArray();
+		logger.info("123");
+		array.add(testService.test());
+		return array;
+	}
+
 }
